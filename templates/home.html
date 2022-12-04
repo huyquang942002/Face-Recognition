@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  
+<h1 class="hello" style="color: red;">Face Recognition</h1>
+<p>Hệ thống nhận dạng khuôn mặt là một ứng dụng máy tính tự động xác định hoặc nhận dạng một người nào đó từ một bức hình ảnh kỹ thuật số hoặc một khung hình video từ một nguồn video. Một trong những cách để thực hiện điều này là so sánh các đặc điểm khuôn mặt chọn trước từ hình ảnh và một cơ sở dữ liệu về khuôn mặt.
+
+<p>Copyright Face Recognition | Design by <a href="https://www.facebook.com/huyquang942002">Nong Quang Huy</a>
+</p>
+
+<a href="https://www.instagram.com/huyquang942002/"><img  src="{{ url_for('static',filename='img/instagram.svg')}}" alt="Ig"></a>
+<a href="https://www.facebook.com/huyquang942002"><img  src="{{ url_for('static',filename='img/facebook.svg')}}" alt="Facebook"></a>
+
+<img class="smaill" style="width: 100%;" src="{{ url_for('static',filename='img/1.jpg')}}" alt="Picture"> 
+</p>
+
+{% endblock %}

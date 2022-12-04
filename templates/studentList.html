@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2>Danh sach sinh vien</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Họ</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Email</th>
+      <th scope="col">Số điện thoại</th>
+      <th scope="col">Lớp</th>
+      <th scope="col">Xác nhận</th>
+    </tr>
+  </thead>
+  <tbody>
+    <form action="/TrainImage" , method="post">
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary is-small" type="submit">
+            Check
+          </button>
+        </div>
+      </div>
+      {% for row in data %}
+      <tr>
+        <th scope="row">
+          <input type="hidden" name="number" , value="{{row[0]}}" />
+          {{row[0]}}
+        </th>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+        <td>{{row[4]}}</td>
+        <td>{{row[5]}}</td>
+        <td></td>
+      </tr>
+      {% endfor %}
+    </form>
+  </tbody>
+</table>
+
+{% endblock %}

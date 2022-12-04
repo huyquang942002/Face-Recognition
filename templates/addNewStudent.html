@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+
+    <h2 class="add" style="color:red; font-size: 30px;">Thêm mới sinh viên !</h2>
+    
+    <form action="/takePhotos" method="post">
+        <div class="field">
+            <label for="number" class="label">Số thứ tự</label>
+            <div class="control">
+              <input type="number" name="number" class="input" required="required"/>
+            </div>
+        </div>
+        
+        <div class="field">
+          <label for="firstName" class="label">Họ</label>
+          <div class="control">
+            <input type="text" name="firstName" class="input" required="required"/>
+          </div>
+        </div>
+        <div class="field">
+          <label for="lastName" class="label">Tên</label>
+          <div class="control">
+            <input type="text" name="lastName" class="input" required="required"/>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email" class="label">Email</label>
+          <div class="control">
+            <input type="email" name="email" class="input" required="required"/>
+          </div>
+        </div>
+        <div class="field">
+          <label for="phone" class="label">Số điện thoại</label>
+          <div class="control">
+            <input type="text" name="phone" class="input" required="required"/>
+          </div>
+        </div>
+        <div class="field">
+          <label for="class" class="label">Lớp</label>
+          <div class="control">
+            <input type="text" name="class" class="input" required="required"/>
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-primary is-small" type="submit">Save</button>
+          </div>
+        </div>
+        
+    </form>
+
+    
+{% endblock %}
